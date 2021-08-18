@@ -29,7 +29,7 @@ def car_price(price: float) -> float:
 
     :return: Стоимость автомобиля с наценками
     """
-    result = None
+    result = price + 500 + 100 + price * TAX / 100 + price * REGISTRATION_FEE / 100
     return result
 
 

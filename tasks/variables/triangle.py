@@ -11,6 +11,9 @@ triangle(3, 4) -> (5, 12, 6)
 """
 
 
+import math
+
+
 def triangle(side_1: int, side_2: int) -> tuple:
     """
     Рассчитывает гипотенузу, периметр и площадь
@@ -24,9 +27,9 @@ def triangle(side_1: int, side_2: int) -> tuple:
     :return: кортеж с параметрами
     :rtype: tuple
     """
-    hypotenuse = None
-    perimeter = None
-    square = None
+    hypotenuse = math.sqrt(side_1**2 + side_2**2)
+    perimeter = side_1 + side_2 + hypotenuse
+    square = (side_1 * side_2) / 2
     return hypotenuse, perimeter, square
 
 
